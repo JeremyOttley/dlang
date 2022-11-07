@@ -1,0 +1,3 @@
+= dlang
+
+// dmd -O -release -inline -boundscheck=off $program
