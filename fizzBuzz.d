@@ -9,17 +9,17 @@ bool gtZero(int n) {
 }
 
 void fizzBuzz(uint n) {
-        foreach (x; 1 .. n + 1) {
-          if (!(x % 15)) {
-                writeln("FizzBuzz");
-    } else if (!(x % 3)) {
-        writeln("Fizz");
-    } else if (!(x % 5)) {
-        writeln("Buzz");
-    } else {
-        writeln(x);
+    foreach (x; 1 .. n + 1) {
+        if (!(x % 15)) {
+            writeln("FizzBuzz");
+        } else if (!(x % 3)) {
+            writeln("Fizz");
+        } else if (!(x % 5)) {
+            writeln("Buzz");
+        } else {
+            writeln(x);
+        }
     }
-  }
 }
 
 void main() {
