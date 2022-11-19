@@ -1,13 +1,10 @@
-import std.string;
-import std.stdio;
-import std.process;
-
-// need a way to capture user input
+import std.string : format, chomp;
+import std.stdio : write, readln, writeln;
+import std.process : execute;
 
 void main() {
-//user input goes here, binds to ch
   write("Channel: ");
-  string channel = readln.strip;
+  string channel = readln.chomp;
   string twitchUrl = format("https://twitch.tv/%s", channel);
   auto cmd = execute(["streamlink", twitchUrl, "best"]);
     if (cmd.status != 0)
