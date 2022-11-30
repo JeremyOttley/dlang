@@ -1,16 +1,16 @@
 import std.stdio : writefln;
 
-struct userConfig {
-	string directory = "Reddit/";
-	string subreddit = "ultrahdwallpapers";
-	long mindWidth = 1920;
-	long minHeight = 1080;
-	long Max = 100;
-	long jsonLimit = 100;
-	long loops = 5;
+struct computer {
+	string manufacturer = "Dell";
+	string cpu = "Intel";
+	float powerConsumption = 89.15;
+	int ram = 32;
+	int ssd = 250;
+	int quantity = 1;
+	float price = 16.00;
 };
 
 void main() {
-	auto myConf = userConfig();
-	writefln("Have you been on Reddit? Have you seen the %s subreddit before?", myConf.subreddit);
+	auto myComp = computer();
+	writefln("I've been using %s products for far too long", myComp.cpu);
 }
