@@ -2,7 +2,7 @@ import std.uni;
 import std.stdio : writeln;
 
 bool smallWord(string s) {
-  return s.length >= 4;
+  return s.length <= 4;
 
 }
 
