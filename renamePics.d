@@ -20,3 +20,4 @@ void main() {
 		rename(image, replaceAll(image, rgx, ""));
 	}
 }
+//"Screenshot 2022-11-29 121107.png" => "121107.png"
