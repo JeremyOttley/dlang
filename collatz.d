@@ -14,18 +14,22 @@ bool isOdd(int n) {
   return !(isEven(n));
 }
 
-void collatz(int n) {
+int collatz(int n) {
   if (isEven(n)) {
-    writefln("%d", (n / 2));
+    return (n / 2);
   } else if (isOdd(n)) {
-    writefln("%d", (n * 3) + 1);
+    return ((n * 3) + 1);
   } else {
-    writefln("%d", n);
+    return n;
   }
 }
 
-void main() {
+unittest {
+	assert(collatz(12) == 6);
+}
+
+int main() {
   writeln("Enter integer: ");
   auto input = readln.chomp.to!int;
-  collatz(input);
+  return collatz(input);
 }
