@@ -15,6 +15,14 @@ bool bigOrSmall(string s) {
     }
 }
 
+unittest {
+  assert(smallWord("Jeremy") == false);
+  assert(bigOrSmall("Jeremy") == false);
+}
+
+
 void main() {
   writeln(bigOrSmall("Jeremy"));
 }
+
+
