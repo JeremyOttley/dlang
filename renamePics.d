@@ -11,13 +11,19 @@ string[] imageFiles() {
 	return images;
 }
 
-void main() {
-    import std.stdio;
-	import std.file : DirEntry, rename;
-	import std.regex;
-    auto rgx = r"Screenshot\s\d{4}-\d{2}-\d{2}\s\d".regex; 
-	foreach(string image; imageFiles()) {
-		rename(image, replaceAll(image, rgx, ""));
-	}
+int main(string[] args) {
+    try {
+        import std.file : DirEntry, rename;
+        import std.regex;
+        auto rgx = r"Screenshot\s\d{4}-\d{2}-\d{2}\s\d".regex; 
+        foreach(string image; imageFiles()) {
+	  	rename(image, replaceAll(image, rgx, ""));
+	  }
+        return 0;
+    } catch(Exception ex) {
+        import std.stdio;
+        stderr.writeln(ex.msg);
+        return 1;
+    }
 }
 //"Screenshot 2022-11-29 121107.png" => "121107.png"
