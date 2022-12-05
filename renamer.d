@@ -1,6 +1,3 @@
-// generate random string
-
-// array of image files in current directory
 string[] imageFiles() {
 	import std.algorithm : filter, map;
 	import std.array : array;
@@ -14,11 +11,12 @@ string[] imageFiles() {
 	return images;
 }
 
-// for each image in imageFiles rename(orig, orig.baseName ~ orig.extension)
 void main() {
-	import std.stdio;
-	import std.file : DirEntry; 
-	foreach(DirEntry image; imageFiles()) {
-		writeln(image.name);
+    import std.stdio;
+	import std.file : DirEntry, rename;
+	import std.regex;
+    auto rgx = r"Screenshot\s\d{4}-\d{2}-\d{2}\s\d".regex; 
+	foreach(string image; imageFiles()) {
+		rename(image, replaceAll(image, rgx, ""));
 	}
 }
