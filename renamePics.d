@@ -21,7 +21,7 @@ int main(string[] args) {
 	  }
         return 0;
     } catch(Exception ex) {
-        import std.stdio;
+        import std.stdio : stderr;
         stderr.writeln(ex.msg);
         return 1;
     }
