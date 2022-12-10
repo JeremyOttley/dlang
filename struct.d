@@ -11,11 +11,11 @@ struct computer {
 };
 
 unittest {
-    auto myComp = computer();
+    computer myComp = computer();
     assert(myComp.cpu == "Intel");
 }
 
 void main() {
-	auto myComp = computer();
+	computer myComp = computer();
 	writefln("I've been using %s products for far too long", myComp.cpu);
 }
