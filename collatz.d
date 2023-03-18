@@ -1,13 +1,14 @@
 import std.stdio : readln, writeln, writefln;
 import std.string : chomp;
 import std.conv : to;
+import std.math;
 
 bool gtZero(int n) {
     return n >= 0;
 }
 
 bool isEven(int n) {
-  return (n % 2 == 0);
+  return (remainder(n,2) == 0);
 }
 
 bool isOdd(int n) {
@@ -28,8 +29,8 @@ unittest {
 	assert(collatz(12) == 6);
 }
 
-int main() {
+void main() {
   writeln("Enter integer: ");
   auto input = readln.chomp.to!int;
-  return collatz(input);
+  writefln("%d", collatz(input));
 }
