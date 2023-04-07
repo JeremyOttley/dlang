@@ -2,7 +2,7 @@ import std.stdio;
 
 void main() {
 
-string lang = "French";
+string lang = "France";
 
 switch(lang) {
 	case "Chile": case "Cuba":
