@@ -1,3 +1,5 @@
+import std.stdio;
+
 void main() {
 
 string lang = "French";
