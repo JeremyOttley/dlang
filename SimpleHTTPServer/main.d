@@ -13,12 +13,12 @@ void myHTTPServer(Cgi cgi)
     {
         case "/style.css":
             cgi.setResponseContentType("text/css");
-            cgi.write("body { color: red; }");
+            cgi.write(std.file.read("views/style.css"));
             break;
 
         case "/":
             cgi.setResponseContentType("text/html");
-            cgi.write(std.file.read("index.html"));
+            cgi.write(std.file.read("views/index.html"));
             break;
 
         default:
