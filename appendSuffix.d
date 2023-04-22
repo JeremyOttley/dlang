@@ -4,16 +4,11 @@ import std.path;
 import std.algorithm;
 import std.array;
 
-bool notExe(string f) {
-    return f.extension != ".exe";
-}
-
 void append2ToFileName()
 {
     auto dir = dirEntries("", SpanMode.shallow)
-		.filter!(a => a.isFile)
+		.filter!(a => a.isFile && !(a.name.extension != ".exe"))
 		.map!(a => baseName(a.name))
-        .filter!(a => notExe(a))
 		.array;
 
     foreach (entry; dir)
