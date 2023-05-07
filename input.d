@@ -1,3 +1,5 @@
+import std.stdio;
+
 //user input 1
 
 void main() {
