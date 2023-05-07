@@ -7,7 +7,7 @@ import std.array;
 void append2ToFileName()
 {
     auto dir = dirEntries("", SpanMode.shallow)
-		.filter!(a => a.isFile && !(a.name.extension != ".exe"))
+		.filter!(a => a.isFile && (a.name.extension != ".exe"))
 		.map!(a => baseName(a.name))
 		.array;
 
