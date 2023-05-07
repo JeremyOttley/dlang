@@ -5,6 +5,6 @@ int fact(int num) {
 		return 1;
 	} else {
 	  int result = num * fact(num -1);
-	  return result
+	  return result;
 	}
 }
