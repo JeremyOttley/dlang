@@ -6,7 +6,7 @@ import std.algorithm : map;
 import std.array : array, split;
 
 bool gtZero(int n) {
-    return n >= 0;
+    return n > 0;
 }
 
 bool isEven(int n) {
