@@ -4,7 +4,7 @@ import std.conv : to;
 import std.math;
 
 bool gtZero(int n) {
-    return n >= 0;
+    return n > 0;
 }
 
 bool isEven(int n) {
